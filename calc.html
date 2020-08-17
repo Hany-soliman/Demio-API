@@ -1,0 +1,166 @@
+<html lang="en" class="js-focus-visible" data-js-focus-visible="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>CSV To JSON Online Free | Online CSV Parser | Online CSV Converter</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
+        integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/css/styles.css"  crossorigin="anonymous" type="text/html">
+    <script src="https://unpkg.com/tippy.js@2.5.3/dist/tippy.all.min.js"></script>
+</head>
+
+<body data-gr-c-s-loaded="true">
+
+    <div id="root" class="content">
+        <div class="App" style="height: auto !important;">
+            <div><button class="toggleOptionBtn pure-button pure-button-primary"><i class="fas fa-cogs"></i> Parser
+                    Options</button><span class="version"> Version: 2.0.6</span>
+                <div class="options pure-u-1 off">
+                    <form class="pure-u-1 pure-g pure-form">
+                        <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-5 optionItem"
+                            data-tippy=""
+                            data-original-title="The format to be converted to. &quot;json&quot; (default) -- convert csv to json. &quot;csv&quot; -- convert csv to csv row array. &quot;line&quot; -- convert csv to csv line string">
+                            <div><label class="optionName">Output</label><input name="output" class="pure-u-1"
+                                    type="text" value="json"></div>
+                        </div>
+                        <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-5 optionItem"
+                            data-tippy=""
+                            data-original-title="delimiter to separate columns. Possible to give an array or just use 'auto'. default comma (,). e.g. --delimiter=# --delimiter='[&quot;,&quot;,&quot;;&quot;]' --delimiter=auto">
+                            <div><label class="optionName">Delimiter</label><input name="delimiter" class="pure-u-1"
+                                    type="text" value="auto"></div>
+                        </div>
+                        <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-5 optionItem"
+                            data-tippy=""
+                            data-original-title="quote surrounding a column content containing delimiters. To turn off quote, please use 'off' --quote=off. default double quote (&quot;). e.g. chage to hash: --quote=# ">
+                            <div><label class="optionName">Quote</label><input name="quote" class="pure-u-1" type="text"
+                                    value="&quot;"></div>
+                        </div>
+                        <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-5 optionItem"
+                            data-tippy=""
+                            data-original-title="Indicate if parser trim off spaces surrounding column content. e.g. &quot; content &quot; will be trimmed to &quot;content&quot;. Default: true">
+                            <div><label class="optionName">Trim</label><label class="pure-checkbox"><input name="trim"
+                                        type="checkbox"> Enabled</label></div>
+                        </div>
+                        <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-5 optionItem"
+                            data-tippy=""
+                            data-original-title="This parameter turns on and off whether check field type. default is false.">
+                            <div><label class="optionName">Check Type</label><label class="pure-checkbox"><input
+                                        name="checkType" type="checkbox"> Disabled</label></div>
+                        </div>
+                        <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-5 optionItem"
+                            data-tippy=""
+                            data-original-title="This parameter turns on and off whether ignore empty column values while parsing. default is false">
+                            <div><label class="optionName">Ignore Empty</label><label class="pure-checkbox"><input
+                                        name="ignoreEmpty" type="checkbox"> Disabled</label></div>
+                        </div>
+                        <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-5 optionItem"
+                            data-tippy=""
+                            data-original-title="Indicating csv data has no header row and first row is data row. Default is false">
+                            <div><label class="optionName">Noheader</label><label class="pure-checkbox"><input
+                                        name="noheader" type="checkbox"> Disabled</label></div>
+                        </div>
+                        <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-5 optionItem"
+                            data-tippy=""
+                            data-original-title="An array to specify the headers of CSV data. If --noheader is false, this value will override CSV header. Default: null. Example: --headers='[&quot;my field&quot;,&quot;name&quot;]'">
+                            <div><label class="optionName">Headers</label><input name="headers" class="pure-u-1"
+                                    type="text" value=""></div>
+                        </div>
+                        <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-5 optionItem"
+                            data-tippy=""
+                            data-original-title="Don't interpret dots (.) and square brackets in header fields as nested object or array identifiers at all (treat them like regular characters for JSON field identifiers). Default: false.">
+                            <div><label class="optionName">Flat Keys</label><label class="pure-checkbox"><input
+                                        name="flatKeys" type="checkbox"> Disabled</label></div>
+                        </div>
+                        <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-5 optionItem"
+                            data-tippy=""
+                            data-original-title="the max character a csv row could have. 0 means infinite. If max number exceeded, parser will emit &quot;error&quot; of &quot;row_exceed&quot;. if a possibly corrupted csv data provided, give it a number like 65535 so the parser wont consume memory. default: 10240">
+                            <div><label class="optionName">Max Row Length</label><input name="maxRowLength"
+                                    class="pure-u-1" type="number" value="0"></div>
+                        </div>
+                        <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-5 optionItem"
+                            data-tippy=""
+                            data-original-title="whether check column number of a row is the same as headers. If column number mismatched headers number, an error of &quot;mismatched_column&quot; will be emitted.. default: false">
+                            <div><label class="optionName">Check Column</label><label class="pure-checkbox"><input
+                                        name="checkColumn" type="checkbox"> Disabled</label></div>
+                        </div>
+                        <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-5 optionItem"
+                            data-tippy="" data-original-title="Explicitly specify the end of line character to use.">
+                            <div><label class="optionName">Eol</label><input name="eol" class="pure-u-1" type="text"
+                                    value=""></div>
+                        </div>
+                        <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-5 optionItem"
+                            data-tippy=""
+                            data-original-title="If any error happens, quit the process quietly rather than log out the error. Default is false.">
+                            <div><label class="optionName">Quiet</label><label class="pure-checkbox"><input name="quiet"
+                                        type="checkbox"> Disabled</label></div>
+                        </div>
+                        <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-5 optionItem"
+                            data-tippy=""
+                            data-original-title="escape character used in quoted column. Default is double quote (&quot;) according to RFC4108. Change to back slash (\) or other chars for your own case.">
+                            <div><label class="optionName">Escape</label><input name="escape" class="pure-u-1"
+                                    type="text" value="&quot;"></div>
+                        </div>
+                        <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-5 optionItem"
+                            data-tippy=""
+                            data-original-title="RegExp matched columns to ignore from input. e.g. --ignoreColumns=/(name|age)/ ">
+                            <div><label class="optionName">Ignore Columns</label><input name="ignoreColumns"
+                                    class="pure-u-1" type="text" value=""></div>
+                        </div>
+                        <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-5 optionItem"
+                            data-tippy=""
+                            data-original-title="RegExp matched columns to include from input. e.g. --includeColumns=/(name|age)/ ">
+                            <div><label class="optionName">Include Columns</label><input name="includeColumns"
+                                    class="pure-u-1" type="text" value=""></div>
+                        </div>
+                        <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-5 optionItem"
+                            data-tippy=""
+                            data-original-title="Specific parser for columns. e.g. --colParser='{&quot;col1&quot;:&quot;number&quot;,&quot;col2&quot;:&quot;string&quot;}'">
+                            <div><label class="optionName">Col Parser</label><input name="colParser" class="pure-u-1"
+                                    type="text" value="{}"></div>
+                        </div>
+                        <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-5 optionItem"
+                            data-tippy=""
+                            data-original-title="Always interpret each line (as defined by eol) as a row. This will prevent eol characters from being used within a row (even inside a quoted field). This ensures that misplaced quotes only break on row, and not all ensuing rows.">
+                            <div><label class="optionName">Always Split At E O L</label><label
+                                    class="pure-checkbox"><input name="alwaysSplitAtEOL" type="checkbox">
+                                    Disabled</label></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="pure-g main ">
+                <div class="pure-u-1 pure-u-md-1-2 active">
+                    <div class="fileDropper "><i class="fas fa-upload"></i>
+                        <div class="dragDropFiles">Drag&amp;Drop files here</div>
+                        <div class="or">OR</div>
+                        <div class="browseFile">Browse Files</div>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2 paste active">
+                    <div style="font-weight: bold; margin-bottom: 5px;">Or Enter CSV Here</div>
+                    <form class="pure-form"><textarea class="pure-input-1" spellcheck="false"></textarea></form>
+                </div>
+            </div>
+            <div class="result pure-u-1"><button disabled="" class="pure-button pure-button-primary button-xlarge"><i
+                        class="fas fa-download"></i> Download JSON (FAST)</button><button disabled=""
+                    class="pure-button button-success button-xlarge"><i class="far fa-eye"></i> Review JSON
+                    (SLOW)</button></div>
+        </div>
+    </div>
+    <div class="footer"><span>Powered by <a href="https://github.com/Keyang/node-csvtojson"
+                target="_blank">node-csvtojson</a></span> <span class="flex1"></span> <span class="copy">© <a
+                href="http://keyangxiang.com/">Keyang Xiang</a> 2018</span></div>
+    <script>
+        tippy(document.querySelectorAll(".tippy"))
+    </script>
+    
+</body>
+
+</html>
